@@ -79,7 +79,7 @@ class BuilderWizardBuilder : StarterModuleBuilder() {
         modulesProvider: ModulesProvider,
     ): Array<ModuleWizardStep> {
         return arrayOf(
-            PlatformOptionsStep(this),
+            //PlatformOptionsStep(this),
         )
     }
 
