@@ -1,0 +1,7 @@
+package ${PACKAGE_NAME}.${SHARED_NAME}
+
+class WasmPlatform: Platform {
+    override val name: String = "Web with Kotlin/Wasm"
+}
+
+actual fun getPlatform(): Platform = WasmPlatform()
