@@ -10,7 +10,6 @@ import com.intellij.ui.IconManager
 import io.github.estivensh4.kotlinmultiplatformwizard.common.models.KmpModuleModel
 import javax.swing.Icon
 
-
 class KmpModuleDescriptionProvider : ModuleDescriptionProvider {
 
     override fun getDescriptions(project: Project): MutableCollection<out ModuleGalleryEntry> {
