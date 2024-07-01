@@ -28,8 +28,11 @@ repositories {
 
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    type.set("AI")
-    version.set("2024.1.1.5")
+    val platformType = providers.gradleProperty("platformType")
+    val platformVersion = providers.gradleProperty("platformVersion")
+
+    type.set(platformType)
+    version.set(platformVersion)
 
     plugins.set(
         listOf(
