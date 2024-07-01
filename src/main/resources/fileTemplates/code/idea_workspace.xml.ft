@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+    <component name="AutoImportSettings">
+        <option name="autoReloadType" value="NONE" />
+    </component>
+    <component name="ChangeListManager">
+        <list default="true" id="bb9033a8-fa42-491e-8dae-eb0cf91eb878" name="Changes" comment="" />
+        <option name="SHOW_DIALOG" value="false" />
+        <option name="HIGHLIGHT_CONFLICTS" value="true" />
+        <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+        <option name="LAST_RESOLUTION" value="IGNORE" />
+    </component>
+    <component name="ClangdSettings">
+        <option name="formatViaClangd" value="false" />
+    </component>
+    <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/esanchez/.android/avd/Pixel_3a_API_34.avd)]" />
+    <component name="ExternalProjectsData">
+        <projectState path="${PROJECT_DIR}$">
+            <ProjectState />
+        </projectState>
+    </component>
+    <component name="ExternalProjectsManager">
+        <system id="GRADLE">
+            <state>
+                <task path="${PROJECT_DIR}$">
+                    <activation />
+                </task>
+                <projects_view>
+                    <tree_state>
+                        <expand>
+                            <path>
+                                <item name="" type="6a2764b6:ExternalProjectsStructure${ROOT_NODE}" />
+                                <item name="${PROJECT}" type="f1a62948:ProjectNode" />
+                            </path>
+                        </expand>
+                        <select />
+                    </tree_state>
+                </projects_view>
+            </state>
+        </system>
+    </component>
+    <component name="KotlinMultiplatform" KONAN_HOME="${USER_HOME}$/.konan/kotlin-native-prebuilt-macos-aarch64-2.0.0">
+        <executable TARGET="ios_arm64" TARGET_NAME="iosArm64" EXECUTABLE_NAME="test" PROJECT_PREFIX=":shared:" IS_TEST="true">
+            <variant NAME="Debug" GRADLE_TASK=":shared:linkDebugTestIosArm64" FILE="${PROJECT_DIR}$/shared/build/bin/iosArm64/debugTest/test.kexe" WORKING_DIR="" PROGRAM_PARAMS="">
+                <envs />
+            </variant>
+        </executable>
+        <executable TARGET="ios_simulator_arm64" TARGET_NAME="iosSimulatorArm64" EXECUTABLE_NAME="test" PROJECT_PREFIX=":shared:" IS_TEST="true">
+            <variant NAME="Debug" GRADLE_TASK=":shared:linkDebugTestIosSimulatorArm64" FILE="${PROJECT_DIR}$/shared/build/bin/iosSimulatorArm64/debugTest/test.kexe" WORKING_DIR="" PROGRAM_PARAMS="">
+                <envs />
+            </variant>
+        </executable>
+        <executable TARGET="ios_simulator_arm64" TARGET_NAME="iosSimulatorArm64" EXECUTABLE_NAME="test" PROJECT_PREFIX=":composeApp:" IS_TEST="true">
+            <variant NAME="Debug" GRADLE_TASK=":composeApp:linkDebugTestIosSimulatorArm64" FILE="${PROJECT_DIR}$/composeApp/build/bin/iosSimulatorArm64/debugTest/test.kexe" WORKING_DIR="" PROGRAM_PARAMS="">
+                <envs />
+            </variant>
+        </executable>
+        <executable TARGET="ios_arm64" TARGET_NAME="iosArm64" EXECUTABLE_NAME="test" PROJECT_PREFIX=":composeApp:" IS_TEST="true">
+            <variant NAME="Debug" GRADLE_TASK=":composeApp:linkDebugTestIosArm64" FILE="${PROJECT_DIR}$/composeApp/build/bin/iosArm64/debugTest/test.kexe" WORKING_DIR="" PROGRAM_PARAMS="">
+                <envs />
+            </variant>
+        </executable>
+        <executable TARGET="ios_x64" TARGET_NAME="iosX64" EXECUTABLE_NAME="test" PROJECT_PREFIX=":composeApp:" IS_TEST="true">
+            <variant NAME="Debug" GRADLE_TASK=":composeApp:linkDebugTestIosX64" FILE="${PROJECT_DIR}$/composeApp/build/bin/iosX64/debugTest/test.kexe" WORKING_DIR="" PROGRAM_PARAMS="">
+                <envs />
+            </variant>
+        </executable>
+        <executable TARGET="ios_x64" TARGET_NAME="iosX64" EXECUTABLE_NAME="test" PROJECT_PREFIX=":shared:" IS_TEST="true">
+            <variant NAME="Debug" GRADLE_TASK=":shared:linkDebugTestIosX64" FILE="${PROJECT_DIR}$/shared/build/bin/iosX64/debugTest/test.kexe" WORKING_DIR="" PROGRAM_PARAMS="">
+                <envs />
+            </variant>
+        </executable>
+    </component>
+    <component name="ProjectColorInfo">{
+        &quot;associatedIndex&quot;: 6
+        }</component>
+    <component name="ProjectId" id="2icRlZXljDDv3oYTAmzGp3wIBaI" />
+    <component name="ProjectViewState">
+        <option name="hideEmptyMiddlePackages" value="true" />
+        <option name="showLibraryContents" value="true" />
+    </component>
+    <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.${PROJECT} [:composeApp:run].executor": "Run",
+    "Gradle.${PROJECT} [:composeApp:wasmJsBrowserDevelopmentRun].executor": "Run",
+    "Kotlin.ApplicationKt.executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "external.system.has.shared.sources": "true",
+    "kotlin-language-version-configured": "true",
+  },
+}]]></component>
+    <component name="RunAnythingCache">
+        <option name="myCommands">
+            <command value="gradle :composeApp:wasmJsBrowserDevelopmentRun" />
+            <command value="gradle :composeApp:run" />
+        </option>
+    </component>
+    <component name="RunManager" selected="Gradle.desktopApp">
+        <configuration name="composeApp" type="AndroidRunConfigurationType" factoryName="Android App">
+            <module name="${PROJECT}.composeApp.main" />
+            <option name="DEPLOY" value="true" />
+            <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+            <option name="DEPLOY_AS_INSTANT" value="false" />
+            <option name="ARTIFACT_NAME" value="" />
+            <option name="PM_INSTALL_OPTIONS" value="" />
+            <option name="ALL_USERS" value="false" />
+            <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+            <option name="CLEAR_APP_STORAGE" value="false" />
+            <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+            <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+            <option name="MODE" value="default_activity" />
+            <option name="CLEAR_LOGCAT" value="false" />
+            <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+            <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+            <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+            <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+            <option name="DEBUGGER_TYPE" value="Auto" />
+            <Auto>
+                <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+                <option name="SHOW_STATIC_VARS" value="true" />
+                <option name="WORKING_DIR" value="" />
+                <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+                <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+                <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+                <option name="DEBUG_SANDBOX_SDK" value="false" />
+            </Auto>
+            <Hybrid>
+                <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+                <option name="SHOW_STATIC_VARS" value="true" />
+                <option name="WORKING_DIR" value="" />
+                <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+                <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+                <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+                <option name="DEBUG_SANDBOX_SDK" value="false" />
+            </Hybrid>
+            <Java>
+                <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+                <option name="DEBUG_SANDBOX_SDK" value="false" />
+            </Java>
+            <Native>
+                <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+                <option name="SHOW_STATIC_VARS" value="true" />
+                <option name="WORKING_DIR" value="" />
+                <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+                <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+                <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+                <option name="DEBUG_SANDBOX_SDK" value="false" />
+            </Native>
+            <Profilers>
+                <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+                <option name="STARTUP_PROFILING_ENABLED" value="false" />
+                <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+                <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+                <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+                <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+            </Profilers>
+            <option name="DEEP_LINK" value="" />
+            <option name="ACTIVITY_CLASS" value="" />
+            <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+            <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+            <method v="2">
+                <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+            </method>
+        </configuration>
+        <configuration name="desktopApp" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+            <ExternalSystemSettings>
+                <option name="executionName" />
+                <option name="externalProjectPath" value="${PROJECT_DIR}$" />
+                <option name="externalSystemIdString" value="GRADLE" />
+                <option name="scriptParameters" value="" />
+                <option name="taskDescriptions">
+                    <list />
+                </option>
+                <option name="taskNames">
+                    <list>
+                        <option value=":composeApp:run" />
+                    </list>
+                </option>
+                <option name="vmOptions" />
+            </ExternalSystemSettings>
+            <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+            <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+            <DebugAllEnabled>false</DebugAllEnabled>
+            <RunAsTest>false</RunAsTest>
+            <method v="2" />
+        </configuration>
+        <configuration name="webApp" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+            <ExternalSystemSettings>
+                <option name="executionName" />
+                <option name="externalProjectPath" value="${PROJECT_DIR}$" />
+                <option name="externalSystemIdString" value="GRADLE" />
+                <option name="scriptParameters" value="" />
+                <option name="taskDescriptions">
+                    <list />
+                </option>
+                <option name="taskNames">
+                    <list>
+                        <option value=":composeApp:wasmJsBrowserDevelopmentRun" />
+                    </list>
+                </option>
+                <option name="vmOptions" />
+            </ExternalSystemSettings>
+            <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+            <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+            <DebugAllEnabled>false</DebugAllEnabled>
+            <RunAsTest>false</RunAsTest>
+            <method v="2" />
+        </configuration>
+        <configuration name="serverApp" type="JetRunConfigurationType" temporary="true">
+            <option name="MAIN_CLASS_NAME" value="com.heydocther.heydocther.ApplicationKt" />
+            <module name="${PROJECT}.server.main" />
+            <shortenClasspath name="NONE" />
+            <method v="2">
+                <option name="Make" enabled="true" />
+            </method>
+        </configuration>
+        <configuration name="iosApp" type="KmmRunConfiguration" factoryName="iOS Application" CONFIG_VERSION="1" EXEC_TARGET_ID="C72DF674-5FD7-4AD9-BBE2-2CA1C9824B1C" XCODE_PROJECT="${PROJECT_DIR}$/iosApp/iosApp.xcodeproj" XCODE_CONFIGURATION="Debug" XCODE_SCHEME="iosApp">
+            <method v="2">
+                <option name="com.jetbrains.kmm.ios.BuildIOSAppTask" enabled="true" />
+            </method>
+        </configuration>
+        <list>
+            <item itemvalue="Android App.composeApp" />
+            <item itemvalue="Gradle.desktopApp" />
+            <item itemvalue="Gradle.webApp" />
+            <item itemvalue="iOS Application.iosApp" />
+            <item itemvalue="Kotlin.serverApp" />
+        </list>
+        <recent_temporary>
+            <list>
+                <item itemvalue="Gradle.desktopApp" />
+                <item itemvalue="Kotlin.serverApp" />
+                <item itemvalue="Gradle.webApp" />
+            </list>
+        </recent_temporary>
+    </component>
+    <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+    <component name="SwiftWorkspaceSettings">
+        <option name="detectedToolchain" value="true" />
+        <option name="toolchainPathValue" value="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain" />
+    </component>
+    <component name="TaskManager">
+        <task active="true" id="Default" summary="Default task">
+            <changelist id="bb9033a8-fa42-491e-8dae-eb0cf91eb878" name="Changes" comment="" />
+            <created>1719788030456</created>
+            <option name="number" value="Default" />
+            <option name="presentableId" value="Default" />
+            <updated>1719788030456</updated>
+        </task>
+        <servers />
+    </component>
+</project>

@@ -7,7 +7,7 @@ plugins {
 group = "${PACKAGE_NAME}"
 version = "1.0.0"
 application {
-    mainClass.set("${PACKAGE_NAME}.ApplicationKt")
+    mainClass.set("${PACKAGE_NAME}.${SERVER_NAME}.ApplicationKt")
 }
 
 dependencies {

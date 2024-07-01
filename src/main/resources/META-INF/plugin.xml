@@ -5,7 +5,7 @@
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Kotlin-multiplatform-wizard</name>
+    <name>Kotlin Multiplatform Wizard</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="estivensh4@gmail.com" url="https://estivensh4.github.io/home">Estiven S.</vendor>
@@ -17,7 +17,7 @@
     The Kotlin Multiplatform Project Generator plugin is an essential tool for developers looking to create cross-platform applications with ease and efficiency. This plugin facilitates the initial setup and structure of a Kotlin Multiplatform project, allowing you to focus on developing your application without worrying about the details of the configuration.
   ]]></description>
     <change-notes><![CDATA[
-<h2>0.1.0</h2>
+<h2>1.0.0</h2>
 <ul>
   <li>Initial version</li>
 </ul>
@@ -26,18 +26,14 @@
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
-    <depends>org.jetbrains.kotlin</depends>
-    <depends>com.intellij.gradle</depends>
-    <depends>com.intellij.modules.java</depends>
+    <depends>org.jetbrains.android</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
 
-    <!-- Extension points defined by the plugin.
-         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
-    <extensions defaultExtensionNs="com.intellij">
-        <moduleType id="FULL_MULTIPLATFORM_COMPOSE_WIZARD"
-                    implementationClass="io.github.estivensh4.kotlinmultiplatformwizard.BuilderModuleType"/>
-        <moduleBuilder
-                builderClass="io.github.estivensh4.kotlinmultiplatformwizard.BuilderWizardBuilder"
-                order="last"/>
-        <fileTemplateGroup implementation="io.github.estivensh4.kotlinmultiplatformwizard.BuilderTemplateGroup"/>
+    <extensions defaultExtensionNs="com.android">
+        <moduleDescriptionProvider implementation="io.github.estivensh4.kotlinmultiplatformwizard.module.KmpModuleDescriptionProvider"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider implementation="io.github.estivensh4.kotlinmultiplatformwizard.project.KmpProjectTemplateProvider"/>
     </extensions>
 </idea-plugin>

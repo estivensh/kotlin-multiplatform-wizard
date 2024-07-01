@@ -1,7 +1,7 @@
 package ${PACKAGE_NAME}.${SHARED_NAME}
 
 class JVMPlatform: Platform {
-    override val name: String = "Java ${System.getProperty("java.version")}"
+    override val name: String = "Java ${JVM_JAVA_VERSION}"
 }
 
 actual fun getPlatform(): Platform = JVMPlatform()

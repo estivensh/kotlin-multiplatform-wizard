@@ -1,8 +1,14 @@
+<#if HAS_DESKTOP>
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+</#if>
+<#if HAS_ANDROID>
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+</#if>
+<#if HAS_WEB>
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
+</#if>
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -12,6 +18,7 @@ plugins {
 }
 
 kotlin {
+    <#if HAS_WEB>
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "composeApp"
@@ -28,16 +35,21 @@ kotlin {
         }
         binaries.executable()
     }
-
+    </#if>
+    <#if HAS_ANDROID>
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
+    </#if>
 
+    <#if HAS_DESKTOP>
     jvm("desktop")
+    </#if>
 
+    <#if HAS_IOS>
     listOf(
         iosX64(),
         iosArm64(),
@@ -48,14 +60,18 @@ kotlin {
             isStatic = true
         }
     }
+    </#if>
 
     sourceSets {
+        <#if HAS_DESKTOP>
         val desktopMain by getting
-
+        </#if>
+        <#if HAS_ANDROID>
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
         }
+        </#if>
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -65,12 +81,15 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(projects.shared)
         }
+        <#if HAS_DESKTOP>
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
         }
+        </#if>
     }
 }
 
+<#if HAS_ANDROID>
 android {
     namespace = "${PACKAGE_NAME}"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
@@ -107,10 +126,12 @@ android {
         debugImplementation(compose.uiTooling)
     }
 }
+</#if>
 
+<#if HAS_DESKTOP>
 compose.desktop {
     application {
-        mainClass = "MainKt"
+        mainClass = "${PACKAGE_NAME}.${COMPOSE_NAME}.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
@@ -119,3 +140,4 @@ compose.desktop {
         }
     }
 }
+</#if>

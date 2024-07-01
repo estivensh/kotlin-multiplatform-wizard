@@ -1,6 +1,5 @@
-package ${PACKAGE_NAME}.${LAST_PACKAGE_NAME}
+package ${PACKAGE_NAME}.${COMPOSE_NAME}
 
-import ${PACKAGE_NAME}.${COMPOSE_NAME}.App
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

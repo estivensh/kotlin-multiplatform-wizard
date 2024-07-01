@@ -8,8 +8,11 @@ android.nonTransitiveRClass=true
 android.useAndroidX=true
 
 #Ktor
-io.ktor.development=true
+io.ktor.developent=true
 
 #MPP
 kotlin.mpp.androidSourceSetLayoutVersion=2
 kotlin.mpp.enableCInteropCommonization=true
+<#if HAS_WEB>
+kotlin.wasm.stability.nowarn=true
+</#if>

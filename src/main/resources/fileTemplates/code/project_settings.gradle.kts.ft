@@ -29,9 +29,7 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
-#if (${HAS_SERVER})
+<#if HAS_SERVER>
 include(":server")
-#elseif(!${HAS_SERVER})
-include(":server")
-#end
+</#if>
 include(":${SHARED_NAME}")

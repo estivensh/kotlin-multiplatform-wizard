@@ -1,69 +1,61 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "1.9.23"
-    id("org.jetbrains.intellij") version "1.17.3"
-    id("org.jetbrains.compose") version "1.6.2"
+    id("org.jetbrains.kotlin.jvm") version "2.0.0"
+    id("org.jetbrains.intellij") version "1.17.4"
     id("idea")
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.23"
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.0"
 }
 
 group = "io.github.estivensh4"
-version = "0.1.0"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
     maven { url = uri("https://maven.pkg.jetbrains.space/public/p/compose/dev") }
     google()
+    maven {
+        url = uri("https://www.jetbrains.com/intellij-repository/snapshots/")
+    }
+    maven {
+        url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
+    }
+    maven {
+        url = uri("https://www.jetbrains.com/intellij-repository/releases")
+    }
 }
 
-// Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2024.1.3")
-    type.set("IC") // Target IDE Platform
+    type.set("AI")
+    version.set("2024.1.1.5")
 
-    plugins.set(listOf(
-        "gradle",
-        "java",
-        "org.jetbrains.kotlin",
-        //"org.jetbrains.android",
-    ))
-}
-
-compose {
-    kotlinCompilerPlugin.set("org.jetbrains.compose.compiler:compiler:1.5.13")
+    plugins.set(
+        listOf(
+            "org.jetbrains.android",
+        ),
+    )
 }
 
 dependencies {
-    implementation(compose.desktop.currentOs)
-    implementation(compose.desktop.linux_x64)
-    implementation(compose.desktop.linux_arm64)
-    implementation(compose.desktop.macos_arm64)
-    implementation(compose.desktop.macos_x64)
-    implementation(compose.desktop.windows_x64)
-    implementation(compose.desktop.common)
-    implementation(compose.materialIconsExtended)
-    val ktorVersion = "2.3.11"
-    implementation("io.ktor:ktor-client-cio-jvm:$ktorVersion")
-    implementation("io.ktor:ktor-client-core:$ktorVersion")
-    implementation("io.ktor:ktor-client-cio:$ktorVersion")
-    implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+    implementation("org.freemarker:freemarker:2.3.31")
 }
 
 tasks {
-    // Set the JVM compatibility versions
     withType<JavaCompile> {
         sourceCompatibility = "17"
         targetCompatibility = "17"
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "17"
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_17)
+        }
     }
 
     patchPluginXml {
-        sinceBuild.set("232")
-        untilBuild.set("242.*")
+        sinceBuild.set("231")
+        untilBuild.set("241.*")
     }
 
     signPlugin {

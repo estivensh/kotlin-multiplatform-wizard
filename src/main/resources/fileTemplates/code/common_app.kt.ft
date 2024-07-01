@@ -13,8 +13,8 @@ import androidx.compose.ui.Modifier
 import ${PACKAGE_NAME}.${SHARED_NAME}.Greeting
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import ${APP_NAME}.composeapp.generated.resources.Res
-import ${APP_NAME}.composeapp.generated.resources.compose_multiplatform
+import ${APP_NAME_LOWERCASE}.composeapp.generated.resources.Res
+import ${APP_NAME_LOWERCASE}.composeapp.generated.resources.compose_multiplatform
 
 @Composable
 @Preview

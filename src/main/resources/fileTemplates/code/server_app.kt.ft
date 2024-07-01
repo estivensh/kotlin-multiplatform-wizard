@@ -15,11 +15,9 @@ fun main() {
 
 fun Application.module() {
 
-    val greeting = Greeting().greet()
-
     routing {
         get("/") {
-            call.respondText("Ktor: ${greeting}")
+            call.respondText("Ktor: ${SERVER_GREETING}")
         }
     }
 }
