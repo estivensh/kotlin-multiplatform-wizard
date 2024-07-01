@@ -19,7 +19,8 @@
     <change-notes><![CDATA[
 <h2>1.0.0</h2>
 <ul>
-  <li>Initial version</li>
+  <li>Support to create new cross-platform module</li>
+  <li>Support for Android Studio to create new projects</li>
 </ul>
 ]]></change-notes>
 
