@@ -67,15 +67,11 @@ class KmpWizardTemplate {
 
 
             widgets(
-                LabelWidget("Platforms"),
                 CheckBoxWidget(includeAndroid),
                 CheckBoxWidget(includeIOS),
                 CheckBoxWidget(includeDesktop),
                 CheckBoxWidget(includeWeb),
-                CheckBoxWidget(includeServer),
-                /*LabelWidget("Libraries"),
-                CheckBoxWidget(useKoin),
-                CheckBoxWidget(useKtor),*/
+                CheckBoxWidget(includeServer)
             )
 
             thumb =

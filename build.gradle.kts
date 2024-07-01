@@ -37,6 +37,7 @@ intellij {
     plugins.set(
         listOf(
             "org.jetbrains.android",
+            "com.intellij.java",
         ),
     )
 }

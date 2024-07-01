@@ -29,6 +29,7 @@
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.android</depends>
     <depends>com.intellij.modules.androidstudio</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.android">
         <moduleDescriptionProvider implementation="io.github.estivensh4.kotlinmultiplatformwizard.module.KmpModuleDescriptionProvider"/>
