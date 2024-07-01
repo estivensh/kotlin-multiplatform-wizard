@@ -4,6 +4,7 @@ import com.android.tools.idea.wizard.model.SkippableWizardStep
 import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.fileEditor.FileDocumentManager
 import com.intellij.openapi.project.Project
+import com.intellij.openapi.project.guessProjectDir
 import com.intellij.openapi.vfs.VirtualFile
 import io.github.estivensh4.kotlinmultiplatformwizard.common.models.KmpModuleModel
 import java.io.IOException
@@ -42,7 +43,7 @@ class KmpConfigureModuleStep(
     private fun createKmmModule(project: Project, model: KmpModuleModel) {
         WriteCommandAction.runWriteCommandAction(project) {
             try {
-                val baseDir = project.baseDir
+                val baseDir = project.guessProjectDir() ?: return@runWriteCommandAction
                 val moduleDir = createDirectory(baseDir, model.moduleName)
                 KmpModuleRecipe().executeRecipe(project, model, moduleDir)
                 addModuleToSettingsGradle(project, model.moduleName)
@@ -53,7 +54,7 @@ class KmpConfigureModuleStep(
     }
 
     private fun addModuleToSettingsGradle(project: Project, moduleName: String) {
-        val settingsFile = project.baseDir.findFileByRelativePath("settings.gradle.kts")
+        val settingsFile = project.guessProjectDir()?.findFileByRelativePath("settings.gradle.kts")
         if (settingsFile != null) {
             WriteCommandAction.runWriteCommandAction(project) {
                 try {
